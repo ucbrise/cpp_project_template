@@ -1,0 +1,14 @@
+// A request for the prime factorization server.
+message Request {
+  // An arbitrary int.
+  required int64 x = 1;
+}
+
+// A reply from the prime factorization server.
+message Reply {
+  // The requested int.
+  required int64 x = 1;
+
+  // The prime factorization of `x`.
+  repeated int64 factor = 2;
+}
