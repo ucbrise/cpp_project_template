@@ -90,6 +90,13 @@ have to take care of first.
         sudo make install
         sudo ldconfig
 
+## Resources
+- [The Definitive C++ Book Guide and
+  List](http://stackoverflow.com/questions/388242/the-definitive-c-book-guide-and-list)
+- [C++ Reference](http://en.cppreference.com/w/)
+- [C++ Open Source Libraries](http://en.cppreference.com/w/cpp/links/libs)
+- [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html)
+
 ## TODO
 - Given a more in-depth description of how the code works and is organized.
 - Describe how to integrate clang-format and clang-tidy with vim, emacs, etc.
