@@ -1,10 +1,11 @@
+#include <cstdint>
 #include <iostream>
 
 #include <zmq.hpp>
 
 #include "factor/factor.h"
 #include "proto/api.pb.h"
-#include "zeromq/util.h"
+#include "zeromq_util/util.h"
 
 int main() {
   zmq::context_t context(1);
@@ -17,10 +18,10 @@ int main() {
     Request request;
     recv_proto(&request, &socket);
 
-    std::vector<long> factors = factor::factor(request.x());
+    std::vector<int64_t> factors = factor::factor(request.x());
     Reply reply;
     reply.set_x(request.x());
-    for (const long factor : factors) {
+    for (const int64_t factor : factors) {
       reply.add_factor(factor);
     }
 

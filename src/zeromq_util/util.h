@@ -7,9 +7,7 @@
 #include <zmq.hpp>
 
 // Converts the data within a `zmq::message_t` into a string.
-std::string message_to_string(const zmq::message_t& message) {
-  return std::string(static_cast<const char*>(message.data()), message.size());
-}
+std::string message_to_string(const zmq::message_t& message);
 
 // Serialize a proto and `send` it over the socket.
 template <typename RequestProto>

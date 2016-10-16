@@ -4,5 +4,6 @@ ADD_EXECUTABLE(server server.cc)
 TARGET_LINK_LIBRARIES(server
     api
     factor
+    zeromq_util
     zmq
 )

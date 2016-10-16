@@ -13,9 +13,7 @@ tricky to get working:
 - The project include microbenchmarks using [Google
   Benchmark](https://github.com/google/benchmark)
 - The project uses Protocol Buffers.
-- TODO(mwhittaker): Add scripts to run clang-format and clang-tidy and mention
-  that. Describe how to integrate the tools into vim, emacs, etc.
-- TODO(someone): Add continuous integration?
+- The project is clang-formatted and clang-tidied.
 
 ## Getting Primal
 This repository implements a prime factorization server and a corresponding
@@ -31,13 +29,22 @@ server, the server sends back their prime factorizations.
 Building and running the code, tests, and benchmarks is a breeze!
 
 ```bash
+# Building Code.
 ./scripts/build_debug.sh    # build the code in debug mode
 ./scripts/build_release.sh  # build the code in release mode
+
+# Running Code.
 ./build/factor/factor_test  # run a test
 (cd build && make test)     # run all the tests
 ./build/factor/factor_bench # run a benchmark
 ./build/server/server       # start the server (in another window)
 ./build/client/client       # start the client
+
+# Formatting and Linting Code.
+clang-format src/server/server.cc                            # format a file
+find src -name '*.cc' -o -name '*.h' | xargs clang-format -i # format all files
+./scripts/run_clang_tidy.sh src/server/server.cc             # lint a file
+./scripts/run_clang_tidy.sh $(find src -name '*.cc')         # lint all files
 ```
 
 ## Dependencies
@@ -78,5 +85,7 @@ have to take care of first.
         sudo make install
         sudo ldconfig
 
-- TODO(mwhittaker): Given a more in-depth description of how the code works and
-  is organized.
+## TODO
+- Given a more in-depth description of how the code works and is organized.
+- Describe how to integrate clang-format and clang-tidy with vim, emacs, etc.
+- Add continuous integration?

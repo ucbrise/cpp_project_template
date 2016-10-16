@@ -1,10 +1,11 @@
+#include <cstdint>
 #include <iostream>
 #include <string>
 
 #include <zmq.hpp>
 
 #include "proto/api.pb.h"
-#include "zeromq/util.h"
+#include "zeromq_util/util.h"
 
 namespace {
 
@@ -25,7 +26,7 @@ int main() {
 
     Reply reply;
     recv_proto(&reply, &socket);
-    for (const long factor : reply.factor()) {
+    for (const int64_t factor : reply.factor()) {
       std::cout << factor << std::endl;
     }
   }
