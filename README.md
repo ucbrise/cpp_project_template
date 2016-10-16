@@ -40,6 +40,44 @@ Building and running the code, tests, and benchmarks is a breeze!
 ./build/client/client       # start the client
 ```
 
+## Dependencies
+Before you build and run the code, there are a couple of dependencies you'll
+have to take care of first.
+
+- *clang.* First, install a recent version of
+  [`clang`](http://clang.llvm.org/), [`libc++`](http://libcxx.llvm.org/),
+  [`clang-format`](http://bit.ly/2dttR1C), and
+  [`clang-tidy`](http://bit.ly/2dttR1C). If you're running Ubuntu 14.04 or
+  later, you can run the following command to get things installed:
+
+    sudo apt-get install clang-3.8 clang-format-3.8 clang-tidy-3.8
+    sudo apt-get install libc++-dev libc++abi-dev
+    sudo ln -s "$(which clang-3.8)" /usr/bin/clang
+    sudo ln -s "$(which clang++-3.8)" /usr/bin/clang++
+    sudo ln -s "$(which clang-format-3.8)" /usr/bin/clang-format
+    sudo ln -s "$(which clang-tidy-3.8)" /usr/bin/clang-tidy
+- *cmake.* Next, install a recent version of
+  [CMake](https://cmake.org/download/). For example,
+
+    wget 'https://cmake.org/files/v3.6/cmake-3.6.2-Linux-x86_64.sh'
+    yes | sh cmake-3.6.2-Linux-x86_64.sh
+    echo 'export PATH="$PATH:$HOME/cmake-3.6.2-Linux-x86_64/bin"' >> ~/.bashrc
+- *protobuf.* Finally, install the [Protocol
+  Buffer](https://cmake.org/download/) compiler and libraries. For example,
+
+    local readonly url='https://github.com/google/protobuf/releases/download/v2.6.1/protobuf-2.6.1.zip'
+    local readonly name='protobuf-2.6.1'
+
+    sudo apt-get install -y autoconf automake libtool curl make g++ unzip
+    wget "$url"
+    unzip "$name.zip"
+    cd "$name"
+    CXX="clang++ -stdlib=libc++" ./configure
+    make # this takes a while
+    make check
+    sudo make install
+    sudo ldconfig
+
 - TODO(mwhittaker): Explain how to install clang, CMake, and protobuf.
 - TODO(mwhittaker): Given a more in-depth description of how the code works and
   is organized.
