@@ -94,3 +94,4 @@ have to take care of first.
 - Given a more in-depth description of how the code works and is organized.
 - Describe how to integrate clang-format and clang-tidy with vim, emacs, etc.
 - Add continuous integration?
+- Add link to the RISE Lab C++ Google Doc.
