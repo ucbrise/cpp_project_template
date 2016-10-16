@@ -78,6 +78,5 @@ have to take care of first.
         sudo make install
         sudo ldconfig
 
-- TODO(mwhittaker): Explain how to install clang, CMake, and protobuf.
 - TODO(mwhittaker): Given a more in-depth description of how the code works and
   is organized.
