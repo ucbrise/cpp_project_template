@@ -3,17 +3,22 @@ This repository is a minimal C++ project template. It is meant to be copied and
 augmented. Though minimal, it includes a couple of useful features that can be
 tricky to get working:
 
-- All the code is built with CMake. Most of the dependencies are managed with
-  CMake too!
+- All the code is built with [CMake](https://cmake.org/). Most of the
+  dependencies are managed with CMake too!
 - The code is separated into multiple directories which use code from one
   another.
-- The project depends on a few third party libraries (e.g. zeromq).
+- The project depends on a few third party libraries (e.g.
+  [zeromq](http://zeromq.org/)).
 - The project includes unit tests using [Google
   Test](https://github.com/google/googletest)
 - The project include microbenchmarks using [Google
   Benchmark](https://github.com/google/benchmark)
-- The project uses Protocol Buffers.
-- The project is clang-formatted and clang-tidied.
+- The project uses [Protocol Buffers](http://clang.llvm.org/extra/clang-tidy/).
+- The project abides by [Google's C++ Style
+  Guide](https://google.github.io/styleguide/cppguide.html), which is also
+  enforced by [`clang-format`](http://clang.llvm.org/docs/ClangFormat.html)
+- The project is linted by and
+  [`clang-tidy`](http://clang.llvm.org/extra/clang-tidy/).
 
 ## Getting Primal
 This repository implements a prime factorization server and a corresponding
