@@ -14,6 +14,7 @@ tricky to get working:
 - The project include microbenchmarks using [Google
   Benchmark](https://github.com/google/benchmark)
 - The project uses [Protocol Buffers](http://clang.llvm.org/extra/clang-tidy/).
+- The project uses [Google's `glog` logging library](https://github.com/google/glog).
 - The project abides by [Google's C++ Style
   Guide](https://google.github.io/styleguide/cppguide.html), which is also
   enforced by [`clang-format`](http://clang.llvm.org/docs/ClangFormat.html)
@@ -44,6 +45,7 @@ Building and running the code, tests, and benchmarks is a breeze!
 ./build/factor/factor_bench # run a benchmark
 ./build/server/server       # start the server (in another window)
 ./build/client/client       # start the client
+cat /tmp/client.INFO        # view the client's logs
 
 # Formatting and Linting Code.
 clang-format src/server/server.cc                            # format a file
