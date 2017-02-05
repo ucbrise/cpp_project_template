@@ -11,7 +11,6 @@ ExternalProject_Add(googletest
     GIT_REPOSITORY "https://github.com/google/googletest"
     GIT_TAG "release-1.8.0"
     PREFIX ${CMAKE_CURRENT_BINARY_DIR}
-    CMAKE_ARGS "-DCMAKE_CXX_FLAGS=-stdlib=libc++"
     INSTALL_COMMAND ""
 )
 

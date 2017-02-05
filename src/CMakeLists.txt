@@ -7,7 +7,6 @@ SET(CPP_PROJECT_TEMPLATE_VERSION_PATCH 0)
 
 SET(CMAKE_CXX_FLAGS_COMMON
     "-std=c++11 \
-    -stdlib=libc++ \
     -Wall \
     -Wextra \
     -Werror")
@@ -16,8 +15,7 @@ SET(CMAKE_CXX_FLAGS_DEBUG
     ${CMAKE_CXX_FLAGS_COMMON}")
 SET(CMAKE_CXX_FLAGS_RELEASE
     "${CMAKE_CXX_FLAGS_RELEASE} \
-    ${CMAKE_CXX_FLAGS_COMMON}
-    -O3")
+    ${CMAKE_CXX_FLAGS_COMMON}")
 
 ADD_SUBDIRECTORY(vendor/googlebenchmark)
 ADD_SUBDIRECTORY(vendor/googletest)

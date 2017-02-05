@@ -84,7 +84,7 @@ have to take care of first.
         wget "$url"
         unzip "$name.zip"
         cd "$name"
-        CXX="clang++ -stdlib=libc++" ./configure
+        CXX="clang++" ./configure
         make # this takes a while
         make check
         sudo make install
