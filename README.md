@@ -27,7 +27,7 @@ server, the server sends back their prime factorizations.
 
         +--------+    120    +--------+
         |        |---------->|        |
-        | client |           | client |
+        | client |           | server |
         |        |<----------|        |
         +--------+  2,3,4,5  +--------+
 
