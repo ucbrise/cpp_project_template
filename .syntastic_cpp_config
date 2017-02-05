@@ -1,0 +1,8 @@
+-std=c++11
+-Ibuild
+-I.
+-Ibuild/vendor/googlebenchmark/src/googlebenchmark/include
+-Ibuild/vendor/googlelog/src/googlelog/src
+-Ibuild/vendor/googletest/src/googletest/googletest/include
+-Ibuild/vendor/zeromqcpp/zeromqcpp-prefix/src/zeromqcpp
+-Ibuild/vendor/zeromq/src/zeromq/include
