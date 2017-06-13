@@ -11,6 +11,7 @@ ExternalProject_Add(googlelog
     PREFIX ${CMAKE_CURRENT_BINARY_DIR}
     BUILD_IN_SOURCE 1
     UPDATE_COMMAND ""
+    CONFIGURE_COMMAND ./autogen.sh && ./configure
     BUILD_COMMAND make
     INSTALL_COMMAND ""
 )
