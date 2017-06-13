@@ -8,7 +8,7 @@ tricky to get working:
 - The code is separated into multiple directories which use code from one
   another.
 - The project depends on a few third party libraries (e.g.
-  [zeromq](http://zeromq.org/) and libtool).
+  [zeromq](http://zeromq.org/) and [libtool](https://www.gnu.org/software/libtool/)).
 - The project includes unit tests using [Google
   Test](https://github.com/google/googletest)
 - The project include microbenchmarks using [Google
@@ -77,7 +77,8 @@ have to take care of first.
         yes | sh cmake-3.6.2-Linux-x86_64.sh
         echo 'export PATH="$PATH:$HOME/cmake-3.6.2-Linux-x86_64/bin"' >> ~/.bashrc
 - *libtool.* Next, install libtool
-	sudo apt-get install libtool
+
+        sudo apt-get install libtool
 - *protobuf.* Finally, install the [Protocol
   Buffer](https://cmake.org/download/) compiler and libraries. For example,
 
